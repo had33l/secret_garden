@@ -12,7 +12,7 @@ function Home() {
     <div>
       <div className="home-container">
         <div className="home-header">
-          <h1>Unlock the Beauty of Nature at Home</h1>
+          <h1>the Beauty of Nature at Home</h1>
         </div>
 
         <div className="home-content">
