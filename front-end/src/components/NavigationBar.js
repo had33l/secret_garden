@@ -48,13 +48,13 @@ function NavigationBar() {
             <Link to="/about" style={linkStyle}>
               About
             </Link>
-            <Link to="/plants" style={linkStyle}>
+            <Link to="/artificial_plants" style={linkStyle}>
               Plants
             </Link>
-            <Link to="/pots_&_accessories" style={linkStyle}>
-              Pots & Accessories
+            <Link to="/pressedFlower_&_pots" style={linkStyle}>
+              PressedFlower & Pots
             </Link>
-            <Link to="/seeds" style={linkStyle}>
+            <Link to="/real_plants" style={linkStyle}>
               Seeds
             </Link>
             <Link to="/blog" style={linkStyle}>

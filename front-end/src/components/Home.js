@@ -4,6 +4,14 @@ import Carousel from "./Carousel";
 import NewInSeason from "./NewInSeason";
 import BestSelling from "./BestSelling";
 import Customers from "./Customers";
+import Inspirational from "./Inspirational";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 import "./homeStyles.css";
 
@@ -12,7 +20,7 @@ function Home() {
     <div>
       <div className="home-container">
         <div className="home-header">
-          <h1>the Beauty of Nature at Home</h1>
+          <h1>Unlock the Beauty of Nature at Home</h1>
         </div>
 
         <div className="home-content">
@@ -47,10 +55,81 @@ function Home() {
         <BestSelling />
       </div>
 
-      
-      <div style={{backgroundColor:"#f7e7e2", padding:"20px", paddingBottom:"50px"}}>
-        <Customers/>
+      <div
+        style={{
+          backgroundColor: "#f7e7e2",
+          padding: "20px",
+          paddingBottom: "50px",
+        }}
+      >
+        <Customers />
       </div>
+      <div style={{ backgroundColor: "#fefaf6", padding: "20px" }}>
+        <Inspirational />
+      </div>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <p>&copy; 2024 The Secret Garden. All Rights Reserved.</p>
+            <p>Contact us: info@secretGarden.com</p>
+
+            <div className="social-media-icons">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+            </div>
+          </div>
+          <div className="footer-quote">
+            <p>"Leave room in your garden for the faeries to dance"</p>
+          </div>
+
+          <div className="footer-right">
+            <div className="payment-methods">
+              <img
+                src={require("../assets/visa.png")}
+                alt="Visa"
+                className="payment-image"
+              />
+              <img
+                src={require("../assets/paypal.png")}
+                alt="PayPal"
+                className="payment-image"
+              />
+              <img
+                src={require("../assets/mastercard.png")}
+                alt="MasterCard"
+                className="payment-image"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

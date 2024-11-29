@@ -1,54 +1,35 @@
 import React, { useState } from "react";
-import "./homeStyles.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faHeartOutline } from "@fortawesome/free-regular-svg-icons";
 import { faHeart as faHeartFilled } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+import products from "./data.json";
+import "./homeStyles.css";
 
-const products = [
-  {
-    image: require("../assets/frame_1.png"),
-    name: "Pressed Rose Petals Frame",
-    price: "$19.99",
-  },
-  {
-    image: require("../assets/frame_2.png"),
-    name: "Pressed Jasmine Frame",
-    price: "$15.99",
-  },
-  {
-    image: require("../assets/frame_3.png"),
-    name: "Pressed Flowers Frame",
-    price: "$12.99",
-  },
-  {
-    image: require("../assets/vase_1.png"),
-    name: "Verdant Grace",
-    price: "$10.99",
-  },
-  {
-    image: require("../assets/vase_2.png"),
-    name: "Wrapped in Elegance",
-    price: "$18.99",
-  },
-  {
-    image: require("../assets/vase_4.png"),
-    name: "Crimson Harvest",
-    price: "$29.99",
-  },
-  {
-    image: require("../assets/roses_bg.png"),
-    name: "Roses",
-    price: "$22.99",
-  },
-  {
-    image: require("../assets/carnation.png"),
-    name: "Carnation Seeds",
-    price: "$14.99",
-  },
-];
 
 function BestSelling() {
   const [liked, setLiked] = useState(Array(products.length).fill(false)); // State to track each product's like status
+  const navigate = useNavigate();
+
+  const bestSellingNames = [
+    "Pressed Rose Petals Frame",
+    "Pressed Jasmine Frame",
+    "Pressed Flowers Frame",
+    "Verdant Grace",
+    "Wrapped in Elegance",
+    "Crimson Harvest",
+    "Roses",
+    "Carnation Seeds",
+  ];
+
+  const goToDetails = (id) => {
+    navigate(`/ProductDetails/${id}`);
+  };
+
+  const bestSellingProducts = products.filter((product) =>
+    bestSellingNames.includes(product.name)
+  );
 
   const toggleLike = (index) => {
     setLiked((prevState) =>
@@ -60,16 +41,23 @@ function BestSelling() {
     <div className="best-selling">
       <h1>Best Selling Products</h1>
       <div className="products-container">
-        {products.map((product, index) => (
-          <div className="product-card" key={index}>
-            <div className="product-image-wrapper">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
+        {bestSellingProducts.map((product, index) => (
+          <div className="product-card" key={product.id}>
+            <div onClick={() => goToDetails(product.id)}>
+              <div className="product-image-wrapper">
+                <img
+                  src={require(`../assets/${product.image}.png`)}
+                  alt={product.name}
+                  className="product-image"
+                />
+                {/* <img
+                    src={product.image}
+                    alt={product.name}
+                    className="product-image"
+                  /> */}
+              </div>
+              <h3 className="product-name">{product.name}</h3>
             </div>
-            <h3 className="product-name">{product.name}</h3>
             <div className="product-info">
               <p className="product-price">{product.price}</p>
               <button
@@ -82,6 +70,7 @@ function BestSelling() {
               </button>
             </div>
             <button className="add-to-cart">Add To Cart</button>
+            <div></div>
           </div>
         ))}
       </div>

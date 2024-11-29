@@ -1,0 +1,96 @@
+[
+    {
+      "id": "1",
+      "image": "frame_1",
+      "name": "Pressed Rose Petals Frame",
+      "price": "$19.99",
+      "description": "A beautiful pressed rose petals frame to brighten up your room.",
+      "type": "Indoor",
+    "tag": "accessory"
+    },
+    {
+      "id": "2",
+      "image": "frame_2",
+      "name": "Pressed Jasmine Frame",
+      "price": "$15.99",
+      "description": "A delicate pressed jasmine flowers frame.",
+      "type": "Indoor",
+    "tag": "accessory"
+    },
+    {
+      "id": "3",
+      "image": "frame_3",
+      "name": "Pressed Flowers Frame",
+      "price": "$12.99",
+      "description": "A mix of colorful pressed flowers for a unique touch.",
+      "type": "Indoor",
+    "tag": "accessory"
+    },
+    {
+      "id": "4",
+      "image": "vase_1",
+      "name": "Verdant Grace",
+      "price": "$10.99",
+      "description": "A vase with a verdant and graceful design.",
+      "type": "Indoor",
+    "tag": "pot"
+    },
+    {
+      "id": "5",
+      "image": "vase_2",
+      "name": "Wrapped in Elegance",
+      "price": "$18.99",
+      "description": "A vase that is wrapped in elegance and charm.",
+      "type": "Indoor",
+    "tag": "pot"
+    },
+    {
+      "id": "6",
+      "image": "vase_4",
+      "name": "Crimson Harvest",
+      "price": "$29.99",
+      "description": "A bold vase inspired by the beauty of crimson harvest.",
+      "type": "Indoor",
+    "tag": "pot"
+    },
+    {
+      "id": "7",
+      "image": "roses_bg",
+      "name": "Roses",
+      "price": "$22.99",
+      "description": "A bunch of vibrant roses to enliven any space.",
+      "type": "Indoor",
+    "tag": "plant"
+    },
+    {
+      "id": "8",
+      "image": "carnation",
+      "name": "Carnation Seeds",
+      "price": "$14.99",
+      "description": "Seeds to grow beautiful carnations in your garden.",
+      "type": "Outdoor",
+    "tag": "seeds"
+    },
+    {
+        "id": "9",
+        "image": "Lavender",
+        "type": "Indoor",
+        "name": "Lavender",
+    "tag": "plant"
+    },
+    {
+        "id": "10",
+        "image": "Spathiphyllum",
+        "type": "Indoor",
+        "name": "Peace Lily",
+    "tag": "plant"
+    },
+    {
+        "id": "11",
+        "image": "bamboo_plant_bg",
+        "type": "Outdoor",
+        "name": "Bamboo Plant",
+    "tag": "plant"
+    }
+  ]
+  
